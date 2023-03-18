@@ -1,0 +1,26 @@
+<!-- Sticky navbar-->
+<header class="header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
+        <div class="container"><a class="navbar-brand" href="${pageContext.request.contextPath}/">
+            <strong class="h6 mb-0 font-weight-bold text-uppercase"><i class="fas fa-sharp fa-regular fa-syringe"></i>
+                Vaccine Manager</strong></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/about"><i
+                            class="fas fa-info"></i> About <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/new"><i
+                            class="fas fa-plus"></i> New</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="${pageContext.request.contextPath}/load"><i
+                            class="fas fa-download"></i> Load</a></li>
+                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/selector"><i
+                            class="fas fa-check-square"></i> Selector</a></li>
+                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/calendar"><i
+                            class="fas fa-calendar"></i> Calendar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
