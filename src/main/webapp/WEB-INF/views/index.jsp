@@ -13,7 +13,6 @@
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
-        <!-- Demo content-->
         <section class="py-5">
             <div class="container pt-3  text-center">
                 <div class="row">
@@ -58,7 +57,7 @@
                                 <div class="row no-gutters h-75">
                                     <div class="col mr-2">
                                         <h2 class="h4">New Calendar</h2>
-                                        <p>create new vaccine calendar from scratches</p>
+                                        <p>Create new vaccine calendar from scratches.</p>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-plus fa-2x text-gray-300"></i>
@@ -82,10 +81,7 @@
                                 <div class="row no-gutters h-75">
                                     <div class="col mr-2">
                                         <h2 class="h4">Load Calendar</h2>
-                                        <p>load calendar from file</p>
-<%--                                        <a href="${pageContext.request.contextPath}/load" class="btn btn-secondary btn-icon-split">--%>
-<%--                                            <span class="text">Load Calendar</span>--%>
-<%--                                        </a>--%>
+                                        <p>Load calendar from file.</p>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-download fa-2x text-gray-300"></i>

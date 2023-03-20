@@ -1,16 +1,73 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Michał
-  Date: 18.03.2023
-  Time: 13:49
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
- <h1> new calendar </h1>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<jsp:useBean id="now" class="java.util.Date"/>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@include file="dynamic/css.jspf" %>
+
+
+<body id="page-top">
+<%@include file="dynamic/navigationMain.jspf" %>
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <section class="pt-5 pb-2">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>Create new vaccine calendar</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-2">
+            <div class="container py-2">
+
+                <div class="row">
+                    <div class="col-xl-12 col-md-12">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+
+                                <div class="form-group row">
+                                    <label class="col-4 col-md-2 col-form-label" for="name">Name: </label>
+                                    <div class="col-8 col-md-10 my-auto">
+                                        <input class="form-control" type="text" placeholder="child's name" id="name">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-4 col-md-2 col-form-label" for="birthDate">Birth date: </label>
+                                    <div class="col-8 col-md-10 my-auto">
+                                        <input class="form-control" type="date" id="birthDate">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-4 col-md-2 col-form-label" for="firstVaccDate">First vaccination
+                                        date: </label>
+                                    <div class="col-8 col-md-10 my-auto">
+                                        <input class="form-control" type="date" id="firstVaccDate">
+                                    </div>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="agreement">
+                                    <label class="form-check-label">
+                                        I solemnly swear that I am up to no good.
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="btn btn-success pull-left" type="submit" value="Create" id="createButton">
+            </div>
+        </section>
+
+        <%@include file="dynamic/board.jspf" %>
+        <%@include file="dynamic/javaScript.jspf" %>
 </body>
 </html>
