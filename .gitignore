@@ -32,6 +32,10 @@ build/
 ### VS Code ###
 .vscode/
 
+### Massive resources ###
+/src/main/webapp/resources/
+
 ### Local profiles ###
 /src/main/resources/application-dev.yml
 /src/main/resources/application-dev.properties
+
