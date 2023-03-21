@@ -5,8 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.AssertTrue;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 
 @Getter
@@ -19,13 +18,12 @@ public class ChildModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @NonNull
-    @NotEmpty
+    @NotBlank
     @Column(name = "name")
     private String name;
     @Column(name = "birth_date")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @NonNull
-    @PastOrPresent
     private LocalDate birthDate;
     @NonNull
     @Column(name="first_vacc_date")
