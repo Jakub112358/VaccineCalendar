@@ -1,0 +1,12 @@
+# See: TEMPLATE.yml
+
+spring:
+  mvc:
+    # JSP settings
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  # Local profile in application-dev.yml
+  profiles:
+    active: dev
