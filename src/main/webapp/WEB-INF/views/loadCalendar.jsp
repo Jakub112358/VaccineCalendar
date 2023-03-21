@@ -29,9 +29,9 @@
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <div class="list-group">
-                                    <button type="button" class="list-group-item list-group-item-action">mock save 1</button>
-                                    <button type="button" class="list-group-item list-group-item-action">mock save 2</button>
-                                    <button type="button" class="list-group-item list-group-item-action">mock save 3</button>
+                                    <c:forEach items="${childList}" var="child">
+                                        <button type="button" class="list-group-item list-group-item-action">${child.name} (born: ${child.birthDate})</button>
+                                    </c:forEach>
                                 </div>
                             </div>
                         </div>
