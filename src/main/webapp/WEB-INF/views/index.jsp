@@ -8,7 +8,6 @@
 
 <body id="page-top">
 <%@include file="dynamic/navigationMain.jspf" %>
-${id}
 <!-- Page Wrapper -->
 <div id="wrapper">
 
