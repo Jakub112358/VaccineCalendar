@@ -2,6 +2,7 @@ package com.example.vaccinecalendar.controller;
 
 import com.example.vaccinecalendar.model.ChildModel;
 import com.example.vaccinecalendar.service.ChildService;
+import com.example.vaccinecalendar.utils.ControllerUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,30 +15,26 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
+
 public class CalendarController {
     private final ChildService childService;
+    private final ControllerUtils controllerUtils;
 
     @GetMapping("/new/{id}")
     public String getNewCalendar(@PathVariable("id") Long id, Model model){
-        ChildModel child = childService.getChildById(id);
-        model.addAttribute("child", child);
-        return "newCalendar";
+        return controllerUtils.loadSelectedChild(model,id,"newCalendar");
     }
 
     @GetMapping("/load/{id}")
     public String getLoadCalendar(@PathVariable("id") Long id,Model model){
-        ChildModel child = childService.getChildById(id);
-        model.addAttribute("child", child);
         List<ChildModel> childList = childService.getChildList();
         model.addAttribute("childList",childList);
-        return "loadCalendar";
+        return controllerUtils.loadSelectedChild(model,id,"loadCalendar");
     }
 
     @GetMapping("/calendar/{id}")
     public String getCalendar(@PathVariable("id") Long id, Model model){
-        ChildModel child = childService.getChildById(id);
-        model.addAttribute("child", child);
-        return "calendar";
+        return controllerUtils.loadSelectedChild(model,id,"calendar");
     }
 
     @PostMapping("/new")

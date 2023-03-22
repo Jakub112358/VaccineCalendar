@@ -31,7 +31,7 @@
                             <div class="card-header py-3">
                                 <div class="list-group">
                                     <c:forEach items="${childList}" var="c">
-                                        <button type="button" class="list-group-item list-group-item-action" onClick="window.location='<c:url value="/selector/${c.id}"/>'">${c.name} (born: ${c.birthDate})</button>
+                                        <a class="list-group-item list-group-item-action" href='<c:url value="/selector/${c.id}"/>'>${c.name} (born: ${c.birthDate})</a>
                                     </c:forEach>
                                 </div>
                             </div>

@@ -1,7 +1,6 @@
 package com.example.vaccinecalendar.controller;
 
-import com.example.vaccinecalendar.model.ChildModel;
-import com.example.vaccinecalendar.service.ChildService;
+import com.example.vaccinecalendar.utils.ControllerUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,7 +11,7 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 @RequiredArgsConstructor
 public class HomeController {
-    private final ChildService childService;
+    private final ControllerUtils controllerUtils;
     @GetMapping("/")
     public RedirectView getHome() {
         return new RedirectView("/0");
@@ -20,16 +19,12 @@ public class HomeController {
 
     @GetMapping("/{id}")
     public String getHome(@PathVariable("id") Long id,Model model){
-        ChildModel child = childService.getChildById(id);
-        model.addAttribute("child",child);
-        return "index";
+        return controllerUtils.loadSelectedChild(model,id,"index");
     }
 
 
     @GetMapping("/about/{id}")
     public String getAbout(@PathVariable("id") Long id,Model model) {
-        ChildModel child = childService.getChildById(id);
-        model.addAttribute("child",child);
-        return "about";
+        return controllerUtils.loadSelectedChild(model,id,"about");
     }
 }
