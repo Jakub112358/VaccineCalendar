@@ -3,6 +3,7 @@
 <jsp:useBean id="now" class="java.util.Date"/>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="dynamic/css.jspf" %>
+<c:set var="child" value="${child}"/>
 
 
 <body id="page-top">
@@ -29,8 +30,8 @@
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <div class="list-group">
-                                    <c:forEach items="${childList}" var="child">
-                                        <button type="button" class="list-group-item list-group-item-action">${child.name} (born: ${child.birthDate})</button>
+                                    <c:forEach items="${childList}" var="c">
+                                        <button type="button" class="list-group-item list-group-item-action" onClick="window.location='<c:url value="/selector/${c.id}"/>'">${c.name} (born: ${c.birthDate})</button>
                                     </c:forEach>
                                 </div>
                             </div>

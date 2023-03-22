@@ -3,10 +3,12 @@
 <jsp:useBean id="now" class="java.util.Date"/>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@include file="dynamic/css.jspf" %>
+<c:set var="child" value="${child}"/>
 
 
 <body id="page-top">
 <%@include file="dynamic/navigationMain.jspf" %>
+${id}
 <!-- Page Wrapper -->
 <div id="wrapper">
 
