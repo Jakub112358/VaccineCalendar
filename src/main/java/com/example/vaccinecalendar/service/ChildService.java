@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -24,5 +25,9 @@ public class ChildService {
     public List<ChildModel> getChildList(){
         return childRepository.findAll();
     }
+    public Optional<ChildModel> getChildById(Long id){
+        return childRepository.findById(id);
+    }
+
 
 }
