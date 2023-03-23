@@ -12,16 +12,16 @@ import java.util.List;
 public class ChildService {
     private final ChildRepository childRepository;
 
-    public void addChild(ChildModel child){
-        try{
+    public void addChild(ChildModel child) {
+        try {
             childRepository.save(child);
-        }catch (Exception e){
+        } catch (Exception e) {
             //TODO: handle this exception
             e.printStackTrace();
         }
     }
 
-    public List<ChildModel> getChildList(){
+    public List<ChildModel> getChildList() {
         return childRepository.findAll();
     }
 
