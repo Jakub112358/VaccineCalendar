@@ -30,7 +30,7 @@ class ChildServiceTest {
 
     @Test
     @DisplayName("Given valid child, when addChild(), then ChildRepository.save(child) is invoked")
-    void addChildCallsRepo() {
+    void addChild_invokesRepo() {
         //given
         ChildModel child = supplyValidChild();
 
@@ -46,7 +46,7 @@ class ChildServiceTest {
 
     @Test
     @DisplayName("Given repo exception, when addChild(), then handles exception")
-    void addChildWithException() {
+    void givenRepoException_addChild_handles() {
         //given
         ChildModel child = supplyValidChild();
         given(repo.save(child)).willThrow(ConstraintViolationException.class);
@@ -59,7 +59,7 @@ class ChildServiceTest {
 
     @Test
     @DisplayName("When getting child list, then ChildRepository.findAll() is invoked")
-    void getChildListCallsRepo() {
+    void getChildList_invokesRepo() {
         //given
         List<ChildModel> children = createChildren();
         given(repo.findAll()).willReturn(children);
